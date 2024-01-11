@@ -6,6 +6,12 @@ function BlogList({blogs}) {
             {blogs.map(blog => (
                 <div className="blog-preview" key={blog.id}>
                     <h2>{blog.title}</h2>
+
+                    <div>
+                        <p>
+                            {blog.body}
+                        </p>
+                    </div>
                     <p>Written by {blog.author}</p>
                 </div>
 
