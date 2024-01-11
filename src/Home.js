@@ -1,27 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import BlogList from "./BlogList";
 
 const Home = () => {
+    const [blogs, setBlogs] = useState(null)
 
-  const[name,setName]=useState("Qasem")
-  const[age,setAge]=useState(30)
+    useEffect(() => {
+        fetch('http://localhost:8000/blogs')
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+                setBlogs(data);
+            })
+    }, [])
 
-  const handleChangeName=()=>{
-    setName("ALI")
-  }
-
-  const handleAge=()=>{
-      const tr= prompt('Enter your age ')
-      setAge(tr)
-  }
-
-  return (
-    <div className="content">
-      <h1>Home</h1>
-      <h2>Hello {name} and your age is {age}</h2>
-      <button onClick={handleChangeName}>Change name</button>
-      <button onClick={handleAge}>Change age</button>
-    </div>
-  );
-};
+    return (
+        <div className="home">
+            {blogs && <BlogList blogs={blogs} />}
+        </div>
+    );
+}
 
 export default Home;
