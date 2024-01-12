@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 /* base styles */
 * {
@@ -24,21 +24,15 @@
   margin-left: 16px;
   text-decoration: none;
   padding: 6px;
-  background-color: #f1356d;
-  color: #f2f2f2;
-  border-radius: 8px;
 }
 .navbar a:hover {
-  color: rgb(232, 32, 95);
-  background-color: rgb(224, 229, 225);
-  font-size: 18px;
+  color: #f1356d;
 }
-.home {
+.content {
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
 }
-
 
 /* blog previews / list */
 .blog-preview {
@@ -53,26 +47,4 @@
   font-size: 20px;
   color: #f1356d;
   margin-bottom: 8px;
-}
-
-/*************************/
-.loader {
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #3498db;
-  width: 120px;
-  height: 120px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
-  animation: spin 2s linear infinite;
-}
-
-/*!* Safari *!*/
-/*@-webkit-keyframes spin {*/
-/*  0% { -webkit-transform: rotate(0deg); }*/
-/*  100% { -webkit-transform: rotate(360deg); }*/
-/*}*/
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
 }
