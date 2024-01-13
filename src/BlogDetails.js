@@ -17,6 +17,7 @@ const BlogDetails = () => {
                     <div>{ blog.body }</div>
                 </article>
             )}
+            {/*<h4>{'http://localhost:8000/blogs/' + id}</h4>*/}
         </div>
     );
 }
