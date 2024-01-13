@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import useFetch from "./useFetch";
+import BasicExample from "./Spinner";
 
 const BlogDetails = () => {
     const { id } = useParams();
@@ -7,7 +8,7 @@ const BlogDetails = () => {
 
     return (
         <div className="blog-details">
-            { isPending && <div>Loading...</div> }
+            { isPending && <div>{<BasicExample/>}</div> }
             { error && <div>{ error }</div> }
             { blog && (
                 <article>
