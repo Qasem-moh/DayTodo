@@ -76,3 +76,10 @@
 .blog-preview a{
   text-decoration: none;
 }
+
+/*****Logo****/
+.logo{
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
