@@ -6,16 +6,17 @@ const Create = () => {
     const [title,setTiltle]=useState('');
     const [body,setBody]=useState('');
     const [author,setAuthor]=useState('other');
-    const [typeB,setTypeB]=useState('other')
+    // const [typeB,setTypeB]=useState('other')
     const[isPendding,setIspendding]=useState(false)
     const history=useHistory()
+
     const handleSubmits=(e)=>{
     e.preventDefault()
         {<BasicExample/>}
-        const blog={title,body,author,typeB};
-        fetch('http://localhost:8000/blogs',{
+        const blog={title,body,author};
+        fetch('https://qasemmo.onrender.com/article',{
             method:'POST',
-            headers: {"Content-type": "pplication/json"},
+            headers: {"Content-type": "application/json"},
             body:JSON.stringify(blog)
 
         }).then(()=>{
@@ -55,8 +56,9 @@ const Create = () => {
 
                 />
 
-                <label>Blog type</label>
+                {/* <label>Blog type</label>
                 <select
+                        required
                     value={typeB}
                     onChange={(e) => setTypeB(e.target.value)}
 
@@ -65,7 +67,7 @@ const Create = () => {
                     <option value="history">History</option>
                     <option value="media">Media</option>
                     <option value="visics">visit</option>
-                </select>
+                </select> */}
                 <button>Add Blog</button>
             </form>
         </div>

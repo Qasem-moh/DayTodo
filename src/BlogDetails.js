@@ -4,15 +4,14 @@ import BasicExample from "./Spinner";
 
 const BlogDetails = () => {
     const { id } = useParams();
-    const { data: blog, error, isPending } = useFetch('http://localhost:8000/blogs/' + id);
+    const { data: blog, error, isPending } = useFetch('https://qasemmo.onrender.com/getOneArticle/' + id);
 const history=useHistory()
     const handleDelete=()=>{
-        fetch('http://localhost:8000/blogs/'+blog.id,{
+        fetch('https://qasemmo.onrender.com/deleteArticle/'+blog._id,{
             method:"DELETE"
         }).then(()=>{
             history.push('/')
         })
-        console.log('http://localhost:8000/blogs/' + id)
     }
     return (
         <div className="blog-details">
